@@ -10,12 +10,12 @@ if(condpag < 0) or (condpag > 3):
     print('Não é uma condição de pagamento')
 else:
     if(condpag == 0):
-        valfinal = valor - ((10/100) * valor)
+        valfinal = valor - (valor * 10/100)
         print('''
         Você irá pagar R$ {:.2f}
               '''.format(valfinal))
     elif(condpag == 1):
-        valfinal = valor - ((5/100) * valor)
+        valfinal = valor - (valor * 5/100)
         print('''
         Você irá pagar R$ {:.2f}
               '''.format(valfinal))
@@ -28,7 +28,7 @@ else:
     elif(condpag == 3):
         vez = int(input('Quantas vzs vc vai dividir no cartão acima de 3x?'))
         if(vez >= 3):
-            valfinal = valor + ((20/100) * valor)
+            valfinal = valor + (valor * 20/100)
             valfinaldiv = valfinal/vez
             print('''
             Você irá pagar {}x de R$ {:.2f}
